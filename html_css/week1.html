@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Tutorial</title>
+
+    <style type="text/css">
+
+        *{
+            margin: 0px;
+            padding: 0px ;
+            box-sizing: border-box;
+        }
+        .container {
+            display: flex;
+            flex-direction: row;
+            /* justify-content: space-around; */
+            border: 1px solid green;
+            height: 10vh;
+            align-items: center;
+        }
+
+        .item {
+            background-color: rgb(204, 202, 202);
+            border: 1px solid rgb(229, 189, 175);
+            padding: 5px;
+            margin: 5px;
+            flex-wrap: wrap;
+        }
+
+        #item1 {
+     
+            background-color: cornflowerblue;
+            flex-shrink: 1;
+            flex-basis: 200px;
+            
+        }
+        #item2 { flex-grow: 1; 
+                flex-shrink: 1;
+                align-self: baseline
+         };
+
+    </style>
+
+</head>
+
+<body>
+    
+    <div class="container">
+        <div class="item" id="item1">Title</div>
+        <div class="item" id="item2">Search Bar</div>
+        <div class="item">Item 3</div>
+        <div class="item">Item 4</div>
+        <div class="item">Item 5</div>
+    </div>
+</body>
+</html>

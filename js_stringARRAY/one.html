@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <label for="">Input</label>
+        <input id="task_input" type="text">
+        <button id="insert_button">Process input</button>
+    </div>
+    <div>
+        <h6>Small Words</h6>
+        <p id="p1"></p>
+    </div>
+    <div>
+        <h1>Big Words</h1>
+        <p id="p2"></p>
+    </div>
+    <script>
+        var txtInput = document.querySelector('#task_input');
+        let items = []
+        const btnInsert = document.querySelector('#insert_button');
+        let bigWords = [];
+        let smallWords = [];
+        btnInsert.addEventListener('click', function() {
+            let word = txtInput.value;
+            items = word.split(',');
+            // console.log(items);
+
+            // for(let i in items) {
+            //     if( items[i].length <= 6) {
+            //         smallWords.push(items[i]);
+            //         document.getElementById('p1').innerHTML = smallWords;
+            //     }
+
+            //     if(items[i].length > 6) {
+
+            //         bigWords.push(items[i]);
+            //         document.getElementById('p2').innerHTML = bigWords;
+            //     }
+            //     }
+            // smallWords = items.filter(arr => arr.length <= 6);
+            // bigWords = items.filter(arr => arr.length > 6);
+            // document.getElementById('p1').innerHTML = smallWords;
+            // document.getElementById('p2').innerHTML = bigWords;
+            document.getElementById('p2').innerHTML = items.filter(arr => arr.length > 6);
+
+        });
+    </script>
+</body>
+</html>

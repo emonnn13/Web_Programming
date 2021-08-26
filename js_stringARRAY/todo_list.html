@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO List</title>
+</head>
+<body>
+    <div>
+        <label> Task</label>
+        <input id="task_input" type="text" name="task" value="">
+        <button id="insert_button">Insert</button>
+    </div>
+    <div>
+        <h3>Tasks</h3>
+        <ol id="task_list">
+            
+        </ol>
+    </div>
+
+    <script>
+        let tasks = []
+        const txtTask = document.querySelector('#task_input');
+        const btnInsert = document.querySelector('#insert_button');
+        
+
+        function refresh_list() {
+            // lstTask.innerHTML = tasks
+            // for(let task in tasks){
+            //     lstTask.innerHTML += '<li>' + tasks[task] + '</li>'
+            // }
+            lstTask.innerHTML = tasks.map(task => `<li>${task}</li>  <button> Edit </button> `).join('')
+        }
+
+
+        btnInsert.addEventListener('click', function () {
+            let task = txtTask.value;
+            tasks.push(task)
+            txtTask.value = '';
+            txtTask.focus();
+            console.table(tasks);
+            refresh_list();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .highlight{
+        color: rgb(24, 26, 143);
+        background-color: #da450a;
+    }
+</style>
+<body>
+
+    <div class="box">
+      <span class="item"> BOX-1</span>
+      <span class="item"> BOX-2</span>
+      <span class="item"> BOX-3</span>
+    </div>
+    <div class="box">
+        <span class="item"> BOX-4</span>
+        <span class="item five"> BOX-5</span>
+        <span class="item"> BOX-6</span>
+    </div>
+    <!-- <button >
+        Click
+    </button> -->
+<script>
+    let elm = document.querySelector('.box .item');
+    // elm.style.color = 'blue';
+    // elm.style.backgroundColor = 'red';
+    // elm.classList.add('hightlight')
+//    console.log(elm.innerHTML);
+//    elm.innerHTML = "This is box 1"
+   
+   //select multiple object inside a class
+   let items = document.querySelectorAll('.box .item');
+   //all the items become array like innerHTML elements.
+//    items[2].innerHTML = "This is NEW BOX"
+
+//sibling element
+//  elm.nextElementSibling.classList.add('highlight'); //colors the 2nd box
+    // elm.parentElement.nextElementSibling.firstElementChild.classList.add('highlight'); //colors the parent box
+    elm.parentElement.nextElementSibling.querySelector('.item.five').classList.add('highlight'); //colors the parent box
+
+
+</script>
+</body>
+</html>

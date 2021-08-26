@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS test</title>
+    <style>
+        .text{
+            display: flex;
+            align-content: center;
+        }
+    </style>
+</head>
+<body>
+
+    <button id="btn-getStr">
+        Click to Enter a day
+    </button>
+
+</body>
+<script>
+
+
+    function dayCheck() {
+    let x= prompt("Enter a password")
+    if (x== 'Saturday') {
+        document.write("Regular Class")
+    }
+    else if (x== 'Sunday') {
+        document.write("Regular Class")
+    }
+    else if (x== 'Monday') {
+        document.write("Make-up Class")
+    }
+    else if (x== 'Tuesday') {
+        document.write("Regular Class")
+    }
+    else if (x== 'Wednesday') {
+        document.write("Regular Class")
+    }
+    else if (x== 'Thursday') {
+        document.write("Holiday")
+    }
+    else if (x== 'Friday') {
+        document.write("Holiday")
+    }
+    else {
+        document.write("Invalid Day")
+    } }
+
+     document.querySelector("#btn-getStr").addEventListener("click", dayCheck);
+
+</script>
+</html>
